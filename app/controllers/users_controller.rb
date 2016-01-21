@@ -5,5 +5,6 @@ class UsersController < ApplicationController
     end
     def index
         @User = User.all
+         @users = User.includes(:profile)
     end
 end
